@@ -1,0 +1,13 @@
+Quiz 1 Reflection
+
+1. What is a namespace? Explain its purpose.
+Namespace is a scope which contains a code created by one group of programmers. The purpose of namespace is to avoid same name conflict. When all parts of code join together, if namespace was not used, it is possible that same name variables from a different part of code will be the same, which will lead to compiler errors. Prototype helps to compiler separate a code and avoid errors.
+2. Why are header files needed? Explain.	
+Header files should be used to include particular part of code to another part and make it useable in that part. If we do not use header file, we supposed to define each realization of each same function in each file where we want to use it. It could be a cause of redefinition error. Also, it will make a code very long and unreadable. Using header file helps to include all functionality of particular part of code by simply adding one line of code.
+3. In the instructions above, you were directed to compile only .cpp files but not the .h files. Explain why you should never compile header files.
+.cpp files are compliable. They contains function realization. .h files, opposite, contain only declarations of a functions. They have no any idea what they should do. In case, if we compile header file, compiler can not do anything with header files. There will be no any benefits from including them. Just a waste of compiler time.
+4. Explain why you should never include .cpp files in another file.
+.cpp file is a function realization. If we will place such file in another, then we will get redefinition error. We will simply have several realizations. However, if we place .h file, we include a prototype, which will reference to realization if necessary.
+5. Explain in your own words what have you learned on this workshop.
+The most important thing I have learned in this class is how to work with protection program from redefinition by adding #pragma or adding #ifndef #define and #endif. Also, I have reinforce my  knowledge about adding header files to cpp files. All other skills which I used to complete this workshop are enough clear for me from java experience. Besides that, I also reinforce my basic knowledge, such as: project creation, including header files, visual studio basic staff and c++ simple operations.
+

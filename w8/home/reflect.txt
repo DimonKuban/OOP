@@ -1,0 +1,19 @@
+Quiz reflection 7:
+3. (1) C++ implements polymorphic objects using pointer syntax
+5. (1) Declare a pure virtual function called foo that receives an int and returns an int:
+virtual int foo(int) = 0;
+Workshop reflection:
+1. What is the difference between an abstract base class and a concrete class?
+Abstract base class is a class which contains or inherits pure virtual function. 
+Concrete class (derived class) contains an implementation of declared functions.
+2. Identify the functions that shadow functions of the same name in your solution?
+bool credit(double); 
+bool debit(double);
+Both function have a default implementation in Account class. 
+In the same time, ChequingAccount implement its own version. 
+As a result, ChequingAccount credit and debit functions shadow the same
+Account's functions.
+3. Explain what have you learned in this workshop.
+In this workshop I have learned how to create abstract base class, 
+define pure virtual function, implement virtual function. 
+Also, I have learned how to distinguish abstract and concrete classes.

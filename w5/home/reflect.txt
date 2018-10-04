@@ -1,0 +1,40 @@
+Quiz reflection:
+1(1) A binary member operator receives ONE parameter.
+5(1) Add the declaration that enables casting from an int to an OOP244 object to the following class definition.
+	...
+	OOP244(int);
+	...
+8(2) a) adds a long to an OOP244:	OOP244 operator+(long, const OOP244);
+     b) adds an OOP244 to a long:	OOP244 operator+(const OOP244, long);
+
+Lab reflection:
+
+1. The operator+ returns a Fraction object. Explain why this operator should not return a reference to a Fraction object. 
+
+Temporary Fraction object, which was created in operator+ implementation function exists only inside of that scope. 
+When the program goes out of scope, the fraction object will no longer exist. If we will return a reference to a 
+nonexistent object, we will get an error.  
+
+2. List the temporary objects in the tester module. 
+
+(a + b)
+(b + d)
+There are only two temporary objects in a tester module. They are created by sum of a,b and b,d fractions and will be no 
+longer exist when the program will go out of scope.
+
+3. List the simplifications that you made to your class to minimize duplication. 
+
+void reduce(); // call reduce function every time before storing data
+int min() const; int max() const; // calling min and max function to find min and max
+int gcd() const; // call gcd function to find the greatest common devisor (implemented by instructor)
+bool isEmpty() const; // check if an object in a safe empty state
+
+Besides this function, I also reused a constructor:
+*this = Fraction(); //call no-argument constructor from within 2-argument constructor to create a safe empty state
+
+Also, overloaded operator + has been used in operator += for overloading implementation.
+
+4. Explain what you have learned in this workshop. 
+
+In this workshop I have learned how to overload an operator as a member function of a class type, learned how to identify 
+an object lifetime and how to access an object from within a member function.

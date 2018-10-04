@@ -1,0 +1,36 @@
+Quiz reflection:
+- 6(1)  Name one keyword that identifies a fundamental type in the parameter declaration of a template
+int
+- Write the code for a template definition of a global function named add that receives 2 unmodifiable 
+references to object of the same type and returns the sum of the 2 object:
+
+template <typename T>
+T add(const T& first, const T& second){
+	return first + second;
+}
+
+Workshop reflection:
+1. What happens if you try to put your templated functions in Data.cpp? 
+Does your source code compile if you move all functions to Data.h? Explain. 
+The compiler gives an error. Template declaration are only aloud to be declared at class, 
+namespace or global scope. To generate a code, compiler should see templates definition
+with particular type. As a result, placing templates in .cpp file is prohibited and 
+will be a cause of errors.
+Program, after placing source code to Data.h file gives an error (… already defined in Data.obj). 
+It happens because .cpp, in this case, has implementation of “answers” function. 
+Compiler creates two objects. Linker is trying to merge them and get symbols which defined multiple times. 
+As a result, we get an error.
+2. Move one templated function into ws9_lab.cpp. Does it work now? Do you need to define the template 
+function above main(), before it is used, or can you define it below main()? 
+If we will put one template function, which is not used in Data.cpp implementation file, 
+and will place it in main BEFORE the entry point, the program will work. 
+However, if we will place it under the main, the main function will not see it, which will lead to compiling error
+(error C3861: 'display': identifier not found)
+3. Could you have done this lab without templates, by just overloading your functions in Data.h 
+to accept integer and double arguments? What is the advantage of using templates? 
+It is possible to successfully complete this lab without templates. However, in this case, 
+I would have to write same implementation for different inputted type values. As a result, 
+the code would be much longer. Templates give a possibility to reuse the same fuction for different input types.
+4. Are the following equivalent? template<class T> 
+template<typename T>
+In the current version C++ which we use they are equivalent.

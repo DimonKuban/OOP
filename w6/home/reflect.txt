@@ -1,0 +1,31 @@
+Quiz reflection:
+1) c) ~OOP244();
+2) Student * student;
+3) student = nullptr;
+   *this = OOP244();
+4) x = x
+6) a) check for self-assignment
+   b) deallocate any memory which was allocated previously for current object
+
+Lab reflection:
+1) Why does the copy assignment operator check for self-assignment before
+doing anything else?
+We must check for self-assignment to make sure we do not copy the same objects in itself.
+If we will try to copy it, the deallocation statement will delete the data, which is
+necessary resource for copying. As a result, we will lose our data.
+2) List how you avoided duplication of code.
+The main simplification I made was init function. This function helped to make localization.
+This function was called from copy constructor and from assignment operator.
+void init(const Contact&);
+Another function which helped to avoid code duplication is 
+bool validPhone(const long long);
+This function was used in 3-argument constructor as well as in operator += overloading. 
+Also, another simplification was calling no-argument constructor from within 3 argument 
+constructor, in case, if we want to set safe empty state.
+*this = Contact();
+Calling isEmpty() function from within display() to check if contact name is empty 
+function was another small simplification. 
+3) List what you have learned in completing this workshop.
+After completing this workshop I have learned how to define: copy constructor, define 
+an assignment operator as well as destructor. Also, I have improved my skills of 
+duplication avoidance by coding special member functions.

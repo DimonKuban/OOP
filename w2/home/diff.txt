@@ -1,0 +1,10 @@
+
+In line number 30 of your output:
+The output should be:
+Kingdoms of SICT
+But your output is: 
+Kingdoms are
+         ^
+---------|
+Professor's character ASCII code: hex(6f), dec(111)
+un-matched character ASCII code: hex(61), dec(97)

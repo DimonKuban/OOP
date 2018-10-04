@@ -1,0 +1,37 @@
+
+Quiz 2 reflection
+
+1 (1) A member function can be a query or a modifier. Which c++ keyword identifies is as a query?
+	const
+
+3 (3) 
+
+#include <iostream>
+class OOP244{
+	int noStudents;
+public:
+	void set(int n) { noStudents = n; }
+	void display(){ std::cout << noStudents << std::endl; }
+};
+
+int main(){
+	OOP244 sectionAB;
+	sectionAB.set(79);
+	sectionAB.display();                 //(sectionAB… was missing)
+} 
+
+	Homework reflection:
+
+1)	How many elements are there in each C-style character string that stores a family or given name for the account? Why? 
+
+In each family of given name there are 41 characters. One extra character is required for null byte '\0', which represents 
+the end of line/array and is required for each array of characters. 
+
+2)	Your class declares two member functions named set(...). In C, this would generate an error. Name the feature of C++ that allows this. 
+
+The feature in c++ that allows to have 2 member function with different parameters order, name or parameter type is called overloading
+
+3)	What have you learned during this workshop? 
+
+During this workshop I have learned about distinguishing  types such as "private" and "public" in class, learned how to get 
+access to the object through their member functions. I have learned basics of  standard library known as "cstring".

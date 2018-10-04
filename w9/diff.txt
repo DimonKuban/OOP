@@ -1,0 +1,10 @@
+
+In line number 10 of your output:
+The output should be:
+There are 1.23 million Grand Theft Auto incidents on average a year
+But your output is: 
+There are 1.23 millions Grand Theft Auto incidents on average a year
+                      ^
+----------------------|
+Professor's character ASCII code: hex(20), dec(32)
+un-matched character ASCII code: hex(73), dec(115)

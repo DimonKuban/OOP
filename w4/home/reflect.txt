@@ -1,0 +1,45 @@
+Quiz reflection:
+
+1-7: correct
+
+8 (1) When does the executable code call the destructor for an object?
+
+The executable code, calls the destructor for an object when the 
+executable code goes outside of class scope during execution or 
+if the program has finished its execution.
+
+1) What is a safe empty state? Could you define another state as the safe empty state? 
+
+Safe empty state is a definition of class members to 0 for numeric 
+variables and to empty line for chars. Safe empty state is necessary 
+to avoid situation, when program calls variables, which do not 
+point anywhere. Avoiding of using empty state can become a cause of errors. 
+We can define another empty state if we need it. It can be used for portion 
+declaration of some variables to 0. However, we can reuse an empty state, 
+which has already been implemented by calling that state.
+
+2) Describe how you have minimized code duplication. 
+
+Code duplication minimizing can be achieved by, reusing functions, which 
+have already been implemented. It means that one function can contain 
+another function implementation inside. As a result, the code becomes more readable.
+
+3) Explain why the canTravelWith(...) member function can access the private data of the object referenced in its parameter. 
+
+Member function canTravelWith(...) receives an address of an object. 
+Since canTravelWith(...) function receives an address of the object, 
+this function can access any variable inside of the received object, 
+including private data, because privacy applied at the class level.
+However, if this function is not a member, we would not have an access 
+its private members. Also, we would not have an access, if we would not
+pass parameters. Another possible way to have access to private members
+is to make a function a friend.
+
+4) What statement do you need to add to ensure that the strncpy(...) function executes correctly? 
+
+To ensure that the strncpy(...) executes correctly I should use #include <cstring>
+
+5) Explain what you have learned in this workshop. 
+
+During this workshop I have learned how to set an empty state in a default 
+constructor as well as how to do a data initialization in constructor during creation of object.

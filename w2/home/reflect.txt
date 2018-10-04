@@ -1,0 +1,33 @@
+
+Quiz 2 Reflection
+
+1) Why do you need to allocate new dynamic memory when you increase the size of an existing array of dynamically allocated memory? 
+
+New dynamic memory is needed if we want to add more elements greater than the original array size. 
+For example, if we allocate memory for an array to hold 10 elements, we cannot put more than 10, otherwise it will cause an error. 
+To avoid this, we should increase the size of the array to be able to hold all elements.
+
+2) The Kingdom structure stores the name of the kingdom in an array of characters. 
+At the end of the program, we do not use the delete operator to deal-locate the memory occupied by the name. 
+Why don't we need to use the delete operator on this array itself? Explain. 
+
+At the end of the program, we used "delete [] king;". 
+Since king is an object of Kingdom type, deleting king will lead to deleting a name as a part of a structure. 
+There is no need to delete each element of that structure because we allocated memory dynamically for the whole structure and deleted it. 
+
+
+3) There are two display(...) function definitions. How does the compiler know which definition to call from your main function? 
+
+The compiler knows which function to call because each function is unique. Function includes:
+1.	Identifier of that function
+2.	Elements type
+3.	Order
+Since each display function has a different number of parameters (const Kingdom& vs const Kingdom[], int), 
+the compiler can easily understand which function should be called depending on how many parameters there are and their type. 	
+
+4) Explain what have you have learned in this workshop. 
+
+The most important and tricky feature which I have learned in this workshop was copying the address of the newly created array 
+into our previously created pointer. This concept was new for me and seems like it would be very useful. 
+Besides that, this workshop helped me to understand how to manage memory in case more memory is required. 
+Also, overloading was another feature I have learned. 
